@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route path="/product/:id" element={ProductDetail} />
-          <Route path="/cart" element={Cart} />
+          <Route exact path="/" Component={Home} />
+          <Route path="/product/:id" Component={ProductDetail} />
+          <Route path="/cart" Component={Cart} />
+          <Route path="/login" Component={Login}/>
+          <Route path="/signup" Component={Signup}/>
         </Routes>
       </main>
       <Footer />
